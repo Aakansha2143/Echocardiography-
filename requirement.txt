@@ -1,0 +1,31 @@
+# Echocardiography PanEcho Inference 
+# -----------------------------------------------------------------------------
+# Python: tested with Python >= 3.9
+# PyTorch (GPU): install CUDA-specific wheels from
+#   https://download.pytorch.org/whl/  after creating your env if needed.
+# This file keeps generic version ranges to work on CPU or GPU.
+# -----------------------------------------------------------------------------
+
+# --- Core scientific stack ----------------------------------------------------
+numpy>=1.26,<3.0
+pandas>=2.1,<3.0
+pillow>=10,<12
+opencv-python>=4.8,<5.0
+matplotlib>=3.8,<4.0
+tqdm>=4.66,<5.0
+
+# --- DICOM stack --------------------------------------------------------------
+# pydicom + pylibjpeg handle most transfer syntaxes (JPEG/J2K, etc).
+# If gdcm (Python) is problematic on your platform, install the OS CLI tool:
+#   Debian/Ubuntu:  apt-get install -y libgdcm-tools
+pydicom>=3.0,<5.0
+pylibjpeg>=2.0,<3.0
+pylibjpeg-libjpeg>=2.0,<3.0
+pylibjpeg-openjpeg>=2.0,<3.0
+gdcm>=1.1,<2.0
+
+# --- PyTorch stack ------------------------------------------------------------
+torch>=2.2,<2.6
+torchvision>=0.17,<0.21
+torchaudio>=2.2,<2.6
+
